@@ -28,10 +28,7 @@ public class ExceptionNumero {
 
         System.out.println("La division es " + divNum.Dividir(n1, n2));
     }
-    catch(NumberFormatException e
-
-    
-        ){
+    catch(NumberFormatException e ){
            System.out.println("Error al convertir lacadena a numero " + e.getMessage());
     }
   }

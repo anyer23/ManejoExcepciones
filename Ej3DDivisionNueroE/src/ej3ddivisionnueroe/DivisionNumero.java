@@ -10,8 +10,7 @@ package ej3ddivisionnueroe;
  */
 public class DivisionNumero {
     public double Dividir(int n1,int n2){
-        
-        
+       
         return n1/n2;
         
     }
