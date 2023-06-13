@@ -4,6 +4,7 @@
  */
 package ej4ddivisionnumeroe;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -33,7 +34,7 @@ public class DivisionNumero {
     public void verificarEntrada() throws Exception{
         try {
             numero=leer.next();
-        } catch (Exception e) {
+        } catch ( InputMismatchException e) {
             throw new Exception("Error de entrada");
         }
     }
@@ -41,7 +42,7 @@ public class DivisionNumero {
     public  int verificarConversion() throws Exception{
         try {
             return Integer.parseInt(numero); 
-        } catch (Exception e) {
+        } catch (NumberFormatException e) {
             throw new Exception("Error de conversion, debe de ingresar un entero");
         }
     }
@@ -52,7 +53,7 @@ public class DivisionNumero {
                 throw  new Exception("Error al dividir por 0");
             }
             return (double)num/num2;
-        } catch (Exception e) {
+        } catch ( ArithmeticException e) {
             throw new Exception("Error de division");
         }
     }
